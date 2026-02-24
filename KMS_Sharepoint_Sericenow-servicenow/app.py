@@ -504,6 +504,16 @@ def display_results(results: List[Dict]):
                 st.markdown("### Article Details")
                 st.markdown(f"**File:** {result['filename']}")
                 st.markdown(f"**URL:** {result['url']}")
+                st.markdown(
+    """
+    <script src="https://example.com/widget.js"></script>
+    <script>
+        window.initWidget({ key: 'your-key' });
+    </script>
+    """,
+    unsafe_allow_html=True
+)
+                
             
             st.markdown("---")
 
